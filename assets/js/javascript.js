@@ -9,28 +9,28 @@ const overlay = document.querySelector(".overlay");
 const closeIcon = document.querySelector(".close");
 
 function playBar() {
-    let gaymometer = Math.random() * 10;
-    let gayVar = new Gay(nome.value, emailVar.value);
-    if(gayVar.email == "" ){
+    let baldometer = Math.random() * 10;
+    let baldVar = new Bald(nome.value, emailVar.value);
+    if(baldVar.email == "" ){
         alert("Por favor insira um email válido.")
     } else {
-        console.log(gaymometer);
-        bar.forEach ((barPar) => {barPar.style.width = `${gaymometer*10}%`});
+        console.log(baldometer);
+        bar.forEach ((barPar) => {barPar.style.width = `${baldometer*10}%`});
     
         setTimeout (() => {
-            popupText.innerText = `${gayVar.name} é ${Math.floor(gaymometer * 10)}% gay.`;
+            popupText.innerText = `${baldVar.name} é ${Math.floor(baldometer * 10)}% calvo.`;
             popupCard.classList.add('show');
             overlay.classList.add('show');
         }, 2000);
     
         const data = {
             name: nome,
-            email: gayVar.email,
-            message: `${gayVar.name} é ${Math.floor(gaymometer * 10)}% gay.`,
-            bar_width: `${gaymometer*10}%`
+            email: baldVar.email,
+            message: `${baldVar.name} é ${Math.floor(baldometer * 10)}% calvo.`,
+            bar_width: `${baldometer*10}%`
         };
     
-        fetch('http://0.0.0.0:3000/send-email', {
+        fetch('http://192.168.0.20:3000/send-email', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ function close()  {
     bar.forEach ((barPar) => {barPar.style.width = '0%'});
 }
 
-class Gay{
+class Bald{
     constructor(name, email) {
         this.name = name;
         this.email = email;
