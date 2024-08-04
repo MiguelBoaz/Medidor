@@ -30,7 +30,7 @@ function playBar() {
             bar_width: `${gaymometer*10}%`
         };
     
-        fetch('http://localhost:3000/send-email', {
+        fetch('http://0.0.0.0:3000/send-email', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
