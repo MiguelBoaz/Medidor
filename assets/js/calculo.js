@@ -2,7 +2,7 @@ const probabilityList = [];
 
 function baldNumber() {
   let repeat = parseInt(age.value);
-  
+  probabilityList.length = 0;
   
   for (let i = 0; i <= repeat; ++i) {
     let randomNumber = (Math.random() * 10).toFixed(2);

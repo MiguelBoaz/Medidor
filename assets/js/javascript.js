@@ -10,7 +10,8 @@ const overlay = document.querySelector(".overlay");
 const closeIcon = document.querySelector(".close");
 
 function playBar() {
-    calculos();
+    let baldometer = calculos();
+    
     let baldVar = new Bald(nome.value, emailVar.value, age.value);
     if(baldVar.email == "" ){
         alert("Por favor insira um email válido.")
