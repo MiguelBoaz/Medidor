@@ -22,8 +22,16 @@
                     <h1>Calvômetro</h1>
                     <p>Preencha os campos abaixo e faça já o   seu teste no <span>calvômetro</span>.
                     </p>
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome" required />
+                    <div class="personalInfo">
+                      <div class="nameDiv">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Nome" required />  
+                      </div>
+                      <div class="ageDiv">
+                        <label for="age">Idade</label>
+                        <input type="text" name="age" id="age"/>
+                      </div>
+                    </div>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Email" />
                 </form>
@@ -54,5 +62,6 @@
         <!-- </div> -->
     </section>
     <script src="assets/js/javascript.js"></script>
+    <script src="assets/js/calculo.js"></script>
 </body>
 </html>

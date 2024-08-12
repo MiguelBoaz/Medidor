@@ -1,5 +1,6 @@
 const nome = document.getElementById("nome");
 const emailVar = document.getElementById("email");
+const age = document.getElementById("age");
 const button = document.querySelector("button");
 const bar = document.querySelectorAll(".bar");
 const popupCard = document.querySelector(".popupSection");
@@ -9,8 +10,8 @@ const overlay = document.querySelector(".overlay");
 const closeIcon = document.querySelector(".close");
 
 function playBar() {
-    let baldometer = Math.random() * 10;
-    let baldVar = new Bald(nome.value, emailVar.value);
+    calculos();
+    let baldVar = new Bald(nome.value, emailVar.value, age.value);
     if(baldVar.email == "" ){
         alert("Por favor insira um email válido.")
     } else {
@@ -24,7 +25,7 @@ function playBar() {
         }, 2000);
     
         const data = {
-            name: nome,
+            name: baldVar.name,
             email: baldVar.email,
             message: `${baldVar.name} é ${Math.floor(baldometer * 10)}% calvo.`,
             bar_width: `${baldometer*10}%`
@@ -57,14 +58,15 @@ function close()  {
     popupCard.classList.remove('show');
     overlay.classList.remove('show');
     nome.value = "";
-
+    emailVar.value = "";
     bar.forEach ((barPar) => {barPar.style.width = '0%'});
 }
 
 class Bald{
-    constructor(name, email) {
+    constructor(name, email, age) {
         this.name = name;
         this.email = email;
+        this.age = age;
     }
 }
 

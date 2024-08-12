@@ -77,6 +77,22 @@ div form p {
 div form p span {
     font-weight: 600;
 }
+div form .personalInfo {
+  display: flex;
+  column-gap: 10px;
+}
+.nameDiv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  flex: 3;
+}
+.ageDiv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  flex: 1;
+}
 div form label {
     font-size: 14px;
     font-weight: 400;
